@@ -1,4 +1,7 @@
-title Part 0 Full Stack Open 2021
+```title Part 0 Full Stack Open 2021
+
+0.4)
+
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 note right of browser
 Start Callback to the API
@@ -30,11 +33,11 @@ server-->browser: main.js
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
 note right of browser
 Send new petition for data changes
-end note 
+end note
 server-->browser: application/json 
 note left of server 
 [{ content: "note: twitter.com/nicoarkano", date: "2021-06-29" }, ...]
 end note
 browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
 server-->browser:favicon.ico
-
+```
