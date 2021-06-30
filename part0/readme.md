@@ -1,7 +1,7 @@
-```title Part 0 Full Stack Open 2021
+title Part 0 Full Stack Open 2021
 
 0.4)
-
+sequenceDiagram
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 note right of browser
 Start Callback to the API
@@ -40,4 +40,4 @@ note left of server
 end note
 browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
 server-->browser:favicon.ico
-```
+end sequenceDiagram
