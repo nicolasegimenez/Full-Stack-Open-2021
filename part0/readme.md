@@ -4,7 +4,7 @@
 
 <img src='https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwIEZ1bGwgU3RhY2sgT3BlbiAyMDIxCmJyb3dzZXItPnNlcnZlcjogSFRUUCBHRVQgaHR0cHM6Ly9zdHVkaWVzLmNzLmhlbHNpbmtpLmZpL2V4YW1wbGVhcHAvbm90ZXMKbm90ZSByaWdodCBvZiAAUQcKU3RhcnQgQ2FsbGJhY2sgdG8gdGhlIEFQSQplbmQgbm90ZQoAdAYtLT4AgQUHOiBIVE1MLWNvZGUAWkVtYWluLmNzcwBWEwASCQAfSWoAThlqACBGZGF0YS5qc29uAIIlE2FwcGxpY2F0aW9uL2pzb24gW3sgY29udGVudDogIkhUTUwgaXMgZWFzeSIsIGRhdGU6ICIyMDE5LTA1LTIzIiB9LCAuLi5dAINFBmxlZgCDRQUAhBMGCkZpcnN0IFJlc3BvbnNlIGRhdGEgSnNvbiBmcm9tAINQBQAiBwCDPhpmYXZpY29uLmljbwoAhGIXUE9TAIRNLWV3XwCEPwUAhGgVIAogU2VuZCBmAIE2BXVzZXIAhGwFOiB0d2l0dGVyLmNvbS9uaWNvYXJrYW5vAIR3GwCFBwoAggcUUmVsb2FkIGFsbACFWAVwYWdlICh3aXRoIGNkbiBvbmx5AIVwBW5ld18AgjIFY2hhbmdlKQCFeAoAg0qCHACIQBcAiDkFZXcgcGV0aXRpb24gZm9yAIUPBgCCWAZzAIhXCSAAhgUkAIVfFCAKAIYyDQCEHxwAhkMMMjEtMDYtMjkAhkUKAIMmQgCGLgwAhjke&s=modern-blue'></img>
 
-`browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+```browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 note right of browser
 Start Callback to the API
 end note
@@ -41,7 +41,7 @@ note left of server
 [{ content: "note: twitter.com/nicoarkano", date: "2021-06-29" }, ...]
 end note
 browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
-server-->browser:favicon.ico`
+server-->browser:favicon.ico```
 
 ## Part 0.5 Full Stack Open 2021
 <img src='https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwLjUgRnVsbCBTdGFjayBPcGVuIDIwMjEKYnJvd3Nlci0-c2VydmVyOiBIVFRQIEdFVCBodHRwczovL3N0dWRpZXMuY3MuaGVsc2lua2kuZmkvZXhhbXBsZWFwcC9zcGEKbm90ZSByaWdodCBvZiAATwcKU3RhcnQgQ2FsbGJhY2sgdG8gdGhlIFdlYmFwcAplbmQgbm90ZQoAdQYtLT4AgQYHOiBIVE1MLWNvZGUAUgZsZWYAUgUAgR4GClJlc3BvbnNlIFNQQSBwYWdlAEEKAIELRG1haW4uY3NzAIEFEwASCQCBcEcuagBSFAASBwCBWiFKYXZhc2NyaXB0AIEzU2RhdGEuanNvbgCDDBNhcHBsaWNhdGlvbi9qc29uIFt7IGNvbnRlbnQ6ICJIVE1MIGlzIGVhc3kiLCBkYXRlOiAiMjAxOS0wNS0yMyIgfSwgLi4uXQCDSBVGaXJzdCAAg1oJZGF0YSBKc29uIGZyb20AhDoFAIN_BwCEJRpmYXZpY29uLmljbwoK&s=modern-blue'></img>
