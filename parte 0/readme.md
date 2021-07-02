@@ -45,7 +45,7 @@ browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
 server-->browser:favicon.ico
 ```
 
-## Part 0.5 Full Stack Open 2021
+## 0.5)
 <img src='https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwLjUgRnVsbCBTdGFjayBPcGVuIDIwMjEKYnJvd3Nlci0-c2VydmVyOiBIVFRQIEdFVCBodHRwczovL3N0dWRpZXMuY3MuaGVsc2lua2kuZmkvZXhhbXBsZWFwcC9zcGEKbm90ZSByaWdodCBvZiAATwcKU3RhcnQgQ2FsbGJhY2sgdG8gdGhlIFdlYmFwcAplbmQgbm90ZQoAdQYtLT4AgQYHOiBIVE1MLWNvZGUAUgZsZWYAUgUAgR4GClJlc3BvbnNlIFNQQSBwYWdlAEEKAIELRG1haW4uY3NzAIEFEwASCQCBcEcuagBSFAASBwCBWiFKYXZhc2NyaXB0AIEzU2RhdGEuanNvbgCDDBNhcHBsaWNhdGlvbi9qc29uIFt7IGNvbnRlbnQ6ICJIVE1MIGlzIGVhc3kiLCBkYXRlOiAiMjAxOS0wNS0yMyIgfSwgLi4uXQCDSBVGaXJzdCAAg1oJZGF0YSBKc29uIGZyb20AhDoFAIN_BwCEJRpmYXZpY29uLmljbwoK&s=modern-blue'></img>
 
 ```
@@ -71,7 +71,7 @@ First Response data Json from the server
 end note
 server-->browser:favicon.ico
 ```
-## 0.5 Full Stack Open 2021
+## 0.6)
 <img src="https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwLjUgRnVsbCBTdGFjayBPcGVuIDIwMjEKYnJvd3Nlci0-c2VydmVyOiBIVFRQIEdFVCBodHRwczovL3N0dWRpZXMuY3MuaGVsc2lua2kuZmkvZXhhbXBsZWFwcC9zcGEKbm90ZSByaWdodCBvZiAATwcKU3RhcnQgQ2FsbGJhY2sgdG8gdGhlIFdlYmFwcAplbmQgbm90ZQoAdQYtLT4AgQYHOiBIVE1MLWNvZGUAUgZsZWYAUgUAgR4GClJlc3BvbnNlIFNQQSBwYWdlAEEKAIELRG1haW4uY3NzAIEFEwASCQCBcEcuagBSFAASBwCBWiFKYXZhc2NyaXB0AIEzU2RhdGEuanNvbgCDDBNhcHBsaWNhdGlvbi9qc29uIFt7IGNvbnRlbnQ6ICJIVE1MIGlzIGVhc3kiLCBkYXRlOiAiMjAxOS0wNS0yMyIgfSwgLi4uXQCDSBVGaXJzdCAAg1oJZGF0YSBKc29uIGZyb20AhDoFAIN_BwCEJRpmYXZpY29uLmljbwCFSxUAhTAxbmV3X25vdGVfAIVQGkZvbGxvdyBNZSBvbiBUd2l0dGVyIEBuaWNvYXJrYW5vAIVeECAtLT4Ahh8IOgCCQBA7IGNoYXJzZXQ9dXRmLTgAhWcedGhlIG5ldwCCJQUAgysGAIZRCCAK&s=modern-blue"></img>
 
 ```
