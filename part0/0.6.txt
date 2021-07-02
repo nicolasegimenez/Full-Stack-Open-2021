@@ -1,0 +1,29 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+note right of browser
+Start Callback to the Webapp
+end note
+server-->browser: HTML-code
+note left of server
+Response SPA page
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+note left of server
+Response SPA Javascript page
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: application/json [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+note left of server
+First Response data Json from the server
+end note
+server-->browser:favicon.ico
+browser->server: HTTTP GET https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note right of browser
+Follow Me on Twitter @nicoarkano
+end note
+server --> browser:application/json; charset=utf-8
+note left of server
+Response the new data.json
+end note 
