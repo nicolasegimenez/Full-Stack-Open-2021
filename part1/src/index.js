@@ -1,19 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+const Hello=(props)=>{
 
-const App =()=>
-  {console.log('Hello from component')
-	const now = new Date()
-	const a=10
-	const b=20
-   return (
-      <div>
-	 <p>Hello World, it is {now.toString()}</p>
-	 <p>
-	    {a} plus {b} is {a + b}
+	return(
+		<div> 
+		<p> Hello {props.name}, you are {props.age} years old </p> 
+		</div>
+	)}
+const Footer =()=>(
+   <div>
+	greeting app created by <a href="https://github.com/nicoarkano">nicoarkano</a>
+   </div>)
 
-	   </p>	   
-      </div>
+const App =()=>{
+	const name = 'Peter'
+	const age=10
+	
+	console.log(name, age);
+	return(
+		<div>
+		<h1>Grettings</h1>
+		<Hello name ="Maya" age={26+10}/>
+		<Hello name={name} age={age}/>
+		<Footer />
+		</div>
    )
 }
 
