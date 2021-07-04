@@ -1,5 +1,23 @@
-#See this project on Vercel
-<a href="https://full-stack-open-2021-ktfbgeq1g-nicoarkano.vercel.app">Click here</a>
+# See this project on Vercel
+
+First part of Full Stack Developer course from University of Helsink  Can you see this project on Vercel:
+
+<a href="https://course-info-nine.vercel.app">Click here</a>
+
+For download and Colaborate with this project you can do this: 
+
+
+``
+git clone https://github.com/nicoarkano/Full-Stack-Open-2021.git
+cd Full-Stack-Open-2021
+yarn build
+yarn init
+``
+
+For course info:
+  <ul>
+  <li><a href="https://fullstackopen.com/es/part1/introduccion_a_react">Spanish</a></li>
+  </ul>
 
 ## Getting Started with Create React App
 
