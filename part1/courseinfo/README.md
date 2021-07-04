@@ -1,6 +1,8 @@
 # See this project on Vercel
 
-First part of Full Stack Developer course from University of Helsink  Can you see this project on Vercel:
+<strong>First part of Full Stack Developer Course from University of Helsinki </strong>
+
+Can you see this project on Vercel:
 
 <a href="https://course-info-nine.vercel.app">Click here</a>
 
