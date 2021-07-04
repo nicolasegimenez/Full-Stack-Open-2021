@@ -1,33 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const Hello=(props)=>{
-
-	return(
-		<div> 
-		<p> Hello {props.name}, you are {props.age} years old </p> 
-		</div>
-	)}
-const Footer =()=>(
-   <div>
-	greeting app created by <a href="https://github.com/nicoarkano">nicoarkano</a>
-   </div>)
-
+import Header from './components/Header.jsx'
 const App =()=>{
-	const name = 'Peter'
-	const age=10
-	
-	console.log(name, age);
-	return(
-		<div>
-		<h1>Grettings</h1>
-		<Hello name ="Maya" age={26+10}/>
-		<Hello name={name} age={age}/>
-		<Footer />
-		</div>
-   )
-}
+	 const course = 'Half Stack Application development'
+	 const part1 = 'Fundamentals of React'
+	 const exercises1= 10
+	 const part2 = 'Using props to pass data'
+	 const exercises2 = 7
+	 const part3 = 'State of a component'
+	 const exercises3 = 14
 
-ReactDOM.render(<App />,  document.getElementById('root'))
+
+	return(
+	<div>
+	 <h1>{course}</h1>
+	 <Header></Header>
+	 <p> 
+	    {part1} {exercises1} 
+	 </p>
+	 <p>
+	    {part2} {exercises2}
+	 </p>
+	 <p>
+	    {part3} {exercises3}
+	 </p>
+	 <p>
+	    Number of excercises: { exercises1 + exercises2 + exercises3 }
+		</p>
+	 </div>
+	)}
+
+      ReactDOM.render(<App />,  document.getElementById('root'))
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
