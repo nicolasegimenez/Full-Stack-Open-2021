@@ -11,7 +11,7 @@ For download and Colaborate with this project you can do this:
 git clone https://github.com/nicoarkano/Full-Stack-Open-2021.git
 cd Full-Stack-Open-2021
 yarn build
-yarn init
+yarn install
 ```
 
 For course info:
