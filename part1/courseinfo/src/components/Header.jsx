@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Header =()=>{
-	const course = 'Half Stack application development'
+const Header =(props)=>{
 	 return (
 
-	       <h1>{course}</h1>
+	       <h1>{props.title}</h1>
 
 	 )
 }
