@@ -1,8 +1,7 @@
 import React from 'react'
 
 const Header =(props)=>{
-	 return (
-
+	return (
 	       <h1>{props.title}</h1>
 
 	 )

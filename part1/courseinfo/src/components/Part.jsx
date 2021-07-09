@@ -1,8 +1,7 @@
 import React from 'react';
-   const Part =(props)=>(
-      <p>
+   const Part =(props)=>{
+   return(  <p>
         {props.part} {props.exercises}
-      </p>
-
-   );
+      </p>)
+};
 export default Part;
