@@ -1,39 +1,38 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './components/Header.jsx';
-import Content from './components/Content.jsx';
-import Total from './components/Total.jsx';
-const App =()=>{
-   const course = 'Half Stack application development'
-   
-   const parts  = [
-	{
-	 name: 'Fundamentals of React',
-	 exercises: 10
-	},
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import Display from './components/Display'
+import Button from './components/Button'
+const App = () => {
+   const [ counter, setCounter ] = useState(0)
+   const increaseByOne =()=> setCounter(counter + 1)
+   const setToZero =()=> setCounter(0)
+   const decreaseByOne = () => setCounter(counter - 1)
 
-	 { 
-	 name: 'Using props to pass data',
-	 exercises: 7
-	 },
-   
-       { name:'State of a component',
-	 exercises: 14
-       } 
-   ]    // const-definitions	
-	return(
+  return (
+    <div>
 
-	 <div>
-	 <Header title = {course}/>
-	<Content parts = {parts}/>
+   <Display counter = {counter}/>
+   <Button 
+	  handleClick={increaseByOne}
+	  text='plus'
+	  />
+   <Button
+	  handleClick={setToZero}
+	  text='zero'
+	  />
 
-	 <Total parts ={parts}/>
-	 </div>
-	)}
-
- ReactDOM.render(<App />,  document.getElementById('root'))
+   <Button
+	  handleClick = {decreaseByOne}
+	  text='minus'
+	  />
 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+   </div>
+
+  )
+}
+
+ReactDOM.render(
+  <App />, 
+  document.getElementById('root')
+)
