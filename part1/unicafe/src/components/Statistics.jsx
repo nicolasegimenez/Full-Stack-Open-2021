@@ -9,15 +9,33 @@ const Statistics = ({good, neutral, bad}) => {
 if (total > 0){	
    return(
      <div>
-      <h1> Statistics </h1>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {good + neutral + bad} </p>
-      <p>Average: {average} </p>
-      <p>Positive: {percentageGood.toFixed(2)}% </p>
-      <p>Neutral: {percentageNeutral.toFixed(2)}% </p>
-      <p>Bad: {percentageBad.toFixed(2)}% </p>
+	   <h1>Statistics</h1>
+      <table>
+      <thead></thead>
+      <tbody>
+      <tr>
+      <th>Good</th>
+      <th>Neutral</th>
+      <th>Bad</th>
+      <th>Total</th>
+      <th>Average</th>
+      <th>Positive</th>
+      <th>Neutral</th>
+      <th>Bad</th>
+      </tr>
+      <tr>
+	 <td>{good}</td>
+	 <td>{neutral}</td>
+	 <td>{bad}</td>
+	 <td>{good + neutral + bad}</td>
+	 <td>{average.toFixed(2)}</td>
+	 <td>{percentageGood.toFixed(2)}%</td>
+	 <td>{percentageNeutral.toFixed(2)}%</td>
+	 <td>{percentageBad.toFixed(2)}%</td>
+
+      </tr>
+      </tbody>
+      </table>
      </div>
    )}
 	else {return(
