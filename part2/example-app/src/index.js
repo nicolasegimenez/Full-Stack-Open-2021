@@ -1,5 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+
+
+
 const notes = [
   {
     id: 1,
@@ -27,9 +31,12 @@ const App = (props) => {
 		<div>
 		  <h1>Notes</h1>
 		<ul>
-		     <li>{notes[0].content}</li>
-		     <li>{notes[1].content}</li>
-		     <li>{notes[2].content}</li>
+		  {notes.map(note => 
+			<li
+			key={note.id}>
+			{note.content}
+			</li>
+		  )}
 		</ul>
 
 		</div>
@@ -39,4 +46,5 @@ const App = (props) => {
 ReactDOM.render(<App notes={notes} />,document.getElementById('root'))
 
 
-export default App
+const result = notes.map(note => note.id)
+console.log(result)
