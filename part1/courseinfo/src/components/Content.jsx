@@ -1,7 +1,7 @@
 import React from 'react'
 import Part from './Part.jsx'
 const Content = ({parts}) =>{
-	console.log("Content.jsx {parts}",  parts)
+	
       return(
       <div>
       <Part part = {parts[0]['name']} exercises = {parts[0]['exercises']}/>
