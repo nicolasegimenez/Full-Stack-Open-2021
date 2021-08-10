@@ -1,5 +1,19 @@
 import React from 'react'
-const Total =(props)=>{
-	return(<p>Number of exercises {props.parts[0]['exercises'] + props.parts[1]['exercises'] + props.parts[2]['exercises']}</p>
+const Total =({parts})=>{
+	console.log("parts", parts)
+	const result = parts.map(parts => parts.exercises)
+    console.log("result",result)
+	
+	var total = result.reduce(function(a, b){ 
+		console.log("a ",a,"b", b)
+		return a + b; 
+	});
+
+	console.log(total)
+	return(
+
+		
+	<strong><p>Number of exercises {total}</p></strong>
+
 	)}
 export default Total
