@@ -4,7 +4,7 @@ import Content from '../components/Content.jsx';
 import Total from '../components/Total.jsx'
 
 const App = () => {
-  
+    const title = "Web Development Curriculum"
     const courses = [
       {
         name: 'Half Stack application development',
@@ -55,8 +55,8 @@ const App = () => {
    
  
       <div>
-      <Header title = {courses[0]["name"]}/>
-      <Content parts = {courses[0]["parts"]}/>
+      <Header title = {title}/>
+      <Content parts = {courses[0]["parts"]} totalParts ={courses}/>
       <Total parts ={courses[0]["parts"]}/>
  
       </div>
