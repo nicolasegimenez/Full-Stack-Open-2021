@@ -49,7 +49,8 @@ const App = () => {
         ]
       }
     ]
-  
+     // eslint-disable-next-line
+    {console.log("parts:", courses.map(course => {course.parts}))}
             
      return(
    
@@ -57,6 +58,7 @@ const App = () => {
       <div>
       <Header title = {title}/>
       <Content parts = {courses[0]["parts"]} totalParts ={courses}/>
+
       <Total parts ={courses[0]["parts"]}/>
  
       </div>

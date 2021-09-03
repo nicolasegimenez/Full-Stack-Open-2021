@@ -1,5 +1,6 @@
 import React from 'react';
    const Part =({part, exercises, subtitle})=>{
+       console.log("subtitle", subtitle)
 
    return(  
    <div>
