@@ -8,17 +8,18 @@ const App = () => {
     { name: 'Mary Poppendieck', number: '39-23-6423122', id:4 }
   ]) 
   const [ newName, setNewName ] = useState('')
-  const [findPerson, setFindPerson] = useState('') 
+	const [findPerson, setFindPerson] = useState([
+		{name: '', id: 11,  user: ''}
+      
+	]) 
   const  arrayPersons = persons.map((person)=> person.name)
-  const handleFindPerson = (event) => {
-      setFindPerson(event.target.value) 
+   const handleFindPerson = (event) => {
+		setFindPerson(event.target.value)
+		const finder = persons.filter((person) =>
+	        person.name.toLowerCase().includes(event.target.value.toLowerCase()))
+		setFindPerson(finder)
   }
-  const name = findPerson
-  const personsToShow = arrayPersons.includes(name)
-		? arrayPersons.reduce((nameFind) => nameFind, name)
-	        : console.log('Hey Baby')
-	        console.log( arrayPersons.includes(name))
-   
+	
   const addName = (event) => {
 
 	  event.preventDefault()
@@ -31,7 +32,6 @@ const App = () => {
 
 	  let findName = arrayPersons.includes(nameObject.name)
 
-	  console.log(findName)
 	  if (findName){
 		  alert(nameObject.name +  ' is already added to phonebook')}
 	  else{
@@ -50,18 +50,25 @@ const App = () => {
 		setNewNumber(event.target.value)
 	}
   return (
-    <div>
-      <h2>Phonebook</h2>
-      Filter shown with: 
-      <form>
-      <div>
-	      <input onChange = {handleFindPerson}/>
-	      <li> {personsToShow}</li>
-      </div>
-      </form>
-      <div> <ul>
+	  <div>
+		  <h1>Phonebook</h1>
+		  <div>
+		  Filter for name: 
+			  <form>
+				  <input 
+				  
+				  onChange = {handleFindPerson}
+			  />
+			  </form>
+			  <ul>
+				  
 
-	  </ul> </div>
+				  {findPerson.map((person)=> <li key= {person.id}> {person.name} {person.number}</li>)}
+
+				    
+
+			  </ul>
+		  </div>
 
       <h3> Add New Contact </h3>
       <form onSubmit ={addName}>
@@ -87,6 +94,5 @@ const App = () => {
       </ul>
     </div>
   )
-}
-
+};
 export default App
