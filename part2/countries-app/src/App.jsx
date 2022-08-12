@@ -24,7 +24,6 @@ const App = () => {
       namesFind.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setFindCountry(finder);
-    console.log(finder)
     
   };
 
@@ -40,7 +39,6 @@ const App = () => {
 
   const countryShow = (countryLi) => {
     setFindCountry([countryLi])
-    console.log(findCountry);
    
   };
 
