@@ -1,45 +1,66 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Temperature from "./Components/Temperature";
 
 const App = () => {
-  //Seteamos el estado del componente
+  //Set the  App State
   const [country, setCountry] = useState([]);
   const [findCountry, setFindCountry] = useState("");
-  
+  const [weather, setWeather] = useState(null);
 
-  //Llamamos a la data con useEffect() responde un array de objetos
+  //call weather api
+  const API_END_POINT = "http://api.weatherstack.com/current?access_key=";
+  const API_KEY = import.meta.env.VITE_API_KEY;
+  const API_COUNTRY = "&query=" + findCountry;
+
+  useEffect(() => {
+    console.log(findCountry);
+    findCountry.length === 1
+      ? axios.get(API_END_POINT + API_KEY + API_COUNTRY).then((response) => {
+         
+           setWeather(response.data);
+        })
+      : [];
+  }, [findCountry]);
+
+  //Call the data with useEffect() response a array object
   useEffect(() => {
     axios.get("https://restcountries.com/v3.1/all/").then((response) => {
       setCountry(response.data);
     });
   }, []);
 
-  //guardamos todos los paises que encontramos en un array llamado "countryName"
-  const countryName = country.map((countries) => countries.name.common)
- 
-  //Funcion que filtra los nombres de los paises con el onChange
+  //Save all the countries we find in a array named "countryName"
+  const countryName = country.map((countries) => countries.name.common);
 
+  //Function has filter the names of the countries in "OnChange"
   const handleFindCountry = (event) => {
+    /*
+     En el siguiente algoritmo:
+     pasamos el e.target.value a lowercast
+     pasamos the nameFind a lowercast
+     buscamos dentro de names find que nombre coincide con el parametro
+     filtramos countryName con la respuesta
+     seteamos findCountry con finder
+    */
     const finder = countryName.filter((namesFind) =>
       namesFind.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setFindCountry(finder);
-    
   };
 
-  //Objecto Encontrado
+  //Object Find
   const objectFind = country.find(
     (element) => element.name.common === findCountry[0]
   );
 
-  //Creamos un boton que evita el código
+  //Prevent the page reload
   const handleButton = (event) => event.preventDefault();
 
-  //Creamos el botón de Show
+  //Create Button Show
 
   const countryShow = (countryLi) => {
-    setFindCountry([countryLi])
-   
+    setFindCountry([countryLi]);
   };
 
   return (
@@ -73,13 +94,17 @@ const App = () => {
                     <h2>Languages</h2>
                     {Object.keys(objectFind.languages).map(function (key) {
                       return <li>{objectFind.languages[key]}</li>;
-                    })}
+                   })}
+              
                   </>
                 ))
               : []}
             <br />
             <img src={objectFind ? objectFind.flags.png : []}></img>
+            <br/>
+            {weather ? <Temperature weather={weather}/> : []}
           </ul>
+       
         )}
       </div>
     </div>
