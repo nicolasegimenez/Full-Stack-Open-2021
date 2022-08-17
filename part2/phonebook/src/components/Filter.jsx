@@ -2,7 +2,7 @@ import React from 'react';
   const Filter = ({handleFindPerson, findPerson}) => (
 	  <div>
 		  
-	  {console.log(findPerson)}
+	  
 		  <h1>Phonebook</h1>
 		  <div>
 		  Filter for name: 
