@@ -80,9 +80,9 @@ const App = () => {
       personServices
         .edit(idName, EditObject)
         .then((response) => console.log(response));
-        personServices.getAll().then((response) => setPersons(response.data));
-        setNewName("");
-        setNewNumber("");
+      personServices.getAll().then((response) => setPersons(response.data));
+      setNewName("");
+      setNewNumber("");
     } else {
       personServices.create(contactObject).then((response) => {
         setPersons(persons.concat(response.data));
