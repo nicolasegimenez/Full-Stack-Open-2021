@@ -1,6 +1,7 @@
 import axios from "axios";
 const baseUrl = "http://localhost:3001/persons";
-
+const msg = "Deleted suscefull"
+const errorMsg =" Error 404 not Found"
 const getAll = () => {
   return axios.get(baseUrl);
 };
@@ -10,7 +11,9 @@ const create = (personObject) => {
 };
 
 const deleteId = (id) => {
-  axios.delete(`${baseUrl}/${id}`)
+return	axios.delete(`${baseUrl}/${id}`)
+		.then(()=>msg)
+		.catch(() =>errorMsg)
 
 }
 

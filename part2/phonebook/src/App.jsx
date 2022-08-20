@@ -3,6 +3,10 @@ import Filter from "./components/Filter.jsx";
 import NewContact from "./components/NewContact.jsx";
 import Numbers from "./components/Numbers.jsx";
 import personServices from "./services/persons";
+import TrueMessage from './components/TrueMessage.jsx';
+import ErrorMessage from './components/ErrorMessage.jsx'
+import './index.css'
+
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -11,11 +15,14 @@ const App = () => {
   const [findPerson, setFindPerson] = useState([
     { name: "", id: 11, user: "" },
   ]);
+  const [trueMessage, setTrueMessage]= useState('')
 
   const [idName, setIdName] = useState([]);
   const [phoneName, setPhoneName] = useState(null);
+  const [view, setView] = useState(false)
+  const [msgError, setMsgError] =useState('')
+  const [viewError, setViewError] = useState(null)
   useEffect(() => {
-    console.log("effect");
     personServices.getAll().then((response) => setPersons(response.data));
   }, []);
 
@@ -81,24 +88,40 @@ const App = () => {
         .edit(idName, EditObject)
         .then((response) => console.log(response));
       personServices.getAll().then((response) => setPersons(response.data));
-      setNewName("");
-      setNewNumber("");
     } else {
       personServices.create(contactObject).then((response) => {
         setPersons(persons.concat(response.data));
-        setNewName("");
-        setNewNumber("");
+	      setView(true)
+      setTrueMessage(`Added ${newName}`)
+	      setTimeout(() => {
+		  ('timeOut')
+	       setTrueMessage(null)
+	      }, 2000)
       });
     }
+      
+        setNewName("");
+        setNewNumber("");
+      
   };
   const deletePerson = (id) => {
-    personServices.deleteId(id);
+	  personServices.deleteId(id).then((response) => {
+		  setMsgError(response)
+		  setViewError(true)
+	  })
+	    setTimeout(() => {
+          setMsgError(null)
+        }, 2000)
+        console.log(viewError)
+
     personServices.getAll().then((response) => setPersons(response.data));
   };
   return (
     <div>
       <Filter handleFindPerson={handleFindPerson} findPerson={findPerson} />
-
+      {viewError ? <ErrorMessage message = {msgError}/>: []}
+      {view ? <TrueMessage  message= {trueMessage}/> : []
+      }
       <NewContact
         addName={addName}
         newName={newName}

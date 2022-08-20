@@ -10,9 +10,7 @@ import React from 'react';
 				  <input 
 				  onChange = {handleFindPerson}/>
 			  </form>
-			  <ul>
 				  {Array.isArray(findPerson) ? findPerson.map((person)=> <li key= {person.id}> {person.name} {person.number}</li> ): []}   
-			  </ul>
 		  </div>
 	  </div> )
 export default Filter
